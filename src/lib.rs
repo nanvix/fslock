@@ -1,3 +1,4 @@
+#![feature(rustc_private)]
 #![cfg_attr(not(feature = "std"), no_std)]
 
 //! **WARNING**: v0.1.x is incompatible with v0.2.x onwards.

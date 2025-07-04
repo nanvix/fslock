@@ -284,7 +284,7 @@ pub fn write(fd: FileDesc, mut bytes: &[u8]) -> Result<(), Error> {
         let written = unsafe {
             libc::write(fd, bytes.as_ptr() as *const libc::c_void, bytes.len())
         };
-        if written < 0 && errno() != libc::EAGAIN {
+        if written < 0 && errno() != libc::EWOULDBLOCK {
             return Err(Error::last_os_error());
         }
         bytes = &bytes[written as usize ..];
