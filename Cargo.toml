@@ -39,3 +39,6 @@ features = [
 [features]
 default = ["std"]
 std = []
+
+[patch.crates-io]
+libc = { git = "https://github.com/nanvix/libc", branch = "danbugs/nanvix/v0.2.174-dev", default-features = false }
