@@ -1,0 +1,2 @@
+[patch.crates-io]
+libc = { git = "https://github.com/nanvix/libc", branch = "nanvix/v0.2.174", default-features = false }
